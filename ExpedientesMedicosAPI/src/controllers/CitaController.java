@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- *
+ * Clase encargada de acceder al sistema de citas
+ * 
  * @author P
  */
 @RestController
@@ -26,7 +27,7 @@ public class CitaController {
 
     @Autowired
     private RestTemplate restTemplate;
-    private final String url = "http://localhost:3000";
+    private final String url = "http://localhost:2000";
     private Gson gson;
     private MultiValueMap<String, String> headers;
 
@@ -42,7 +43,7 @@ public class CitaController {
     }
 
     /**
-     * Metodo encargado de registrar un expediente en el servicio
+     * Metodo encargado de registrar una cita en el servicio
      *
      * @param exp Expediente a registrar
      * @return True si fue un exito de lo contrario false.
@@ -138,7 +139,7 @@ public class CitaController {
     }
     
     /**
-     * Metodo encargado de consultar las citas por curp del paciente
+     * Metodo encargado de consultar las citas por cedula del doctor
      * 
      * @param cedula Cedula del doctor a consultar
      * @return Lista de citas del doctor

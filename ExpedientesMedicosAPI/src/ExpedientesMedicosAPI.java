@@ -35,7 +35,13 @@ public interface ExpedientesMedicosAPI {
     public Usuario identificarse(String user, String pass);
     
     // Citas
-    public Cita registrarCita(Cita cita);
+    public boolean registrarCita(Cita cita);
     
-    public Cita[] consultaCitas(String curp);
+    public boolean modificarCita(Cita cita);
+    
+    public boolean eliminarCita(Cita cita);
+    
+    public Cita[] consultaCitasDoctor(String cedula);
+    
+    public Cita[] consultaCitasPaciente(String curp);
 }

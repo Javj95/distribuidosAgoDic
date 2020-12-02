@@ -80,12 +80,34 @@ public class ExpedientesMedicos implements ExpedientesMedicosAPI {
     }
     
     @Override
-    public Cita registrarCita(Cita cita) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean registrarCita(Cita cita) {
+        boolean result = citasApi.registrarCita(cita);
+        return result;
     }
 
     @Override
-    public Cita[] consultaCitas(String curp) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean modificarCita(Cita cita) {
+        boolean result = citasApi.modificarCita(cita);
+        return result;
     }
+
+    @Override
+    public boolean eliminarCita(Cita cita) {
+        boolean result = citasApi.eliminarCita(cita);
+        return result;
+    }
+
+    @Override
+    public Cita[] consultaCitasDoctor(String cedula) {
+        Cita[] result = citasApi.consultarCitasDoctor(cedula);
+        return result;
+    }
+
+    @Override
+    public Cita[] consultaCitasPaciente(String curp) {
+        Cita[] result = citasApi.consultarCitasPaciente(curp);
+        return result;
+    }
+
+    
 }
