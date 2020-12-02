@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+	padding: 0  0 6%;
+	background-color: #DDDDDD;
+}
+img{
+	width: 300px;
+	height: 85px;
+	float: right;
+	opacity: 0.8;
+}
+form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 500px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+input{
+	font-weight: 700;
+}
+input[type=text], input[type=password],input[type=date]{
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #484848;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+input[type=submit] {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #CAD3C8;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: #484848;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin:0;
+}
+/*-----------------------------------PAGINA INICIO-----------------------------------*/
+nav{
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  margin-top: 0.5%;
+}
+nav ul{
+  float: left;
+  list-style-type: none;
+  padding: 0; 
+  position: relative; 
+  left: 15%;
+}
+nav ul li{
+ float: left;
+ position: relative; 
+ right: 15%;
+ padding: 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  padding: 15px;
+  color: #484848;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-right: 2px solid #424242;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.uno{
+  background-color: #F5B7B1;
+}
+.dos{
+  background-color: #E8DAEF;
+}
+.tres{
+  background-color: #AED6F1;
+}
+.cuatro{
+  background-color: #A9DFBF;
+}
+.cinco{
+  background-color: #F9E79F;
+}
+main{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+section{
+  width: 50%;
+  margin: 0 auto;
+}
+section ul{
+  list-style: none;
+  text-align: center;
+  margin-top: 10%;
+}
+section ul li{
+  list-style-position: inside;
+  margin-bottom: 5%;
+  padding: 5%;
+  border-radius: 30px 30px 30px 30px;
+}
+section ul li a{
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #424242;
+}
+.seis{
+  background-color: #E8DAEF;
+}
+.siete{
+  background-color: #AED6F1;
+}
+.ocho{
+  background-color: #A9DFBF;
+}
+.nueve{
+  background-color: #F9E79F;
+}
+/*-----------------------------------PAGINA EXPEDIENTE-----------------------------------*/
+.wrapper{
+  width: 90%;
+  margin: 0;
+  padding-bottom: 5%;
+}
+.wrapper section{
+  width: 50%;
+}
+.exp{
+  margin-bottom: 3%;
+}
+.exp ul{
+ float: left;
+ list-style-type: none;
+ padding: 0; 
+ position: relative; 
+}
+.exp li{
+ float: left;
+ position: relative; 
+ padding: 15px;
+}
+.exp a{
+  border: none;
+  background-color: #E8DAEF;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 2px solid #484848;
+}
+.wrapper h1{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: 700;
+  margin-top: 2%;
+}
+table .n{
+  background-color: #c6c6c6;
+  width: 200px;
+}
+table .m{
+  width: 500px;
+}
+/*-----------------------------------PAGINA CITAS-----------------------------------*/
+.formCitas{
+  margin-top: -3%;
+}
+textarea{
+  width: 100%;
+  height: 10em;
+  border: none;
+  resize: none;
+}
+/*-----------------------------------PAGINA TABLA CITAS-----------------------------------*/
+.exp2{
+  margin-bottom: 2%;
+}
+.exp2 a{
+  background-color: #AED6F1;
+}
+.dateT th{
+  background-color: #AED6F1;
+  color: #000;
+  font-weight: bold;
+}
+.dateT tr td{
+  padding: 5px;
+}
+.sec{
+  width: 50%;
+  margin: auto;
+}
+.dateT{
+  width: 100%;
+}
