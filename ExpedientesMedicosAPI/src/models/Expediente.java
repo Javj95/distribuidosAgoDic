@@ -5,7 +5,7 @@
  */
 package models;
 
-import models.aux.Entrada;
+import models.expediente.Entrada;
 
 /**
  *

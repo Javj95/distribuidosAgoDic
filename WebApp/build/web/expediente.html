@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Expediente</title>
+        <link rel="stylesheet" href="assets/css/registro.css">
+    </head>
+    <body>
+        <header id="header" class="">
+            <img src="assets/img/logo.jpg" alt="">
+        </header><!-- /header -->
+        <nav>
+            <ul>
+                <li><a href="principal.html" title="" class="uno">Principal</a></li>
+                <li><a href="expediente.html" title="" class="dos">Expediente</a></li>
+                <li><a href="citas.html" title="" class="tres">Citas</a></li>
+                <li><a href="doctores.html" title="" class="cuatro">Doctores</a></li>
+                <li><a href="entidad.html" title="" class="cinco">EntidadSalud</a></li>
+            </ul>
+        </nav>
+        <main class="wrapper">
+            <nav>
+                <ul class="exp">
+                    <li><a href="" name="expedienteBtn">Expediente</a></li>
+                    <li><a href="registrarExpediente.html" name="registrarExpedienteBtn">Registrar Datos de Expediente</a></li>
+                    <li><a href="">Agregar entrada al historial</a></li>
+                    <li><a href="">Otorgar Acceso al Expediente</a></li>
+                    <li><a href="">Agregar Tutor al Expediente</a></li>
+                </ul>
+            </nav>
+            <h1 onload="cargarExpediente">Informacion Expediente</h1>
+            <section>
+                <table>
+                    <tr>
+                        <td class="n">CURP</td>
+                        <td class="m" id="curp"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Apellido Paterno</td>
+                        <td class="m" id="apellidoPaterno"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Apellido Materno</td>
+                        <td class="m" id="apellidoMaterno"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Nombre</td>
+                        <td class="m" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Fecha de nacimiento</td>
+                        <td class="m" id="fechaNacimiento"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Edad</td>
+                        <td class="m" id="edad"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Sexo</td>
+                        <td class="m" id="sexo"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Domicilio</td>
+                        <td class="m" id="domicilio"></td>
+                    </tr>
+                    <tr>
+                        <td class="n">Historial</td>
+                        <td class="m" id="historial"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <script  src="./js/peticiones.js"></script>
+    </body>
+</html>

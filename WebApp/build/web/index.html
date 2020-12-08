@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <div class="login-page">
+            <div class="form">
+                <img src="assets/img/logo.jpg" alt="">
+                <h1 class="iSes">Inicio de Sesion</h1>
+                <form method="POST" action="/ServletRegister" class="register-form">
+                    <input type="text" name="username" placeholder="Nombre" required />
+                    <input type="password" name="password" placeholder="Contrasenna" required/>
+                    <label for="tipo_usuario"></label>
+                    <select name="tipo_usuario" id="tipo_usuario">
+                        <option value="Paciente">Paciente</option>
+                        <option value="Doctor">Doctor</option>
+                    </select>
+                    <input type="password" name="id" placeholder="Identificador" required/>
+                    <button type="submit">agregar</button>
+                    <p class="message">Ya tienes cuenta? <a href="#">Ingresate</a></p>
+                </form>
+                <form method="POST" action="/ServletAuth" class="login-form">
+                    <input type="text" name="username" placeholder="Nombre" required/>
+                    <input type="password" name="password" placeholder="Contrasenna" required/>
+                    <button type="submit">iniciar sesion</button>
+                    <p class="message">No te has registrado? <a href="#">Crea una cuenta</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script  src="./js/script.js"></script>
+        <!-- development version, includes helpful console warnings -->
+    </body>
+</html>

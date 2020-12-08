@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Expediente</title>
+        <link rel="stylesheet" href="assets/css/registro.css">
+    </head>
+    <body>
+        <header id="header" class="">
+            <img src="assets/img/logo.jpg" alt="">
+        </header><!-- /header -->
+        <nav>
+            <ul>
+                <li><a href="principal.html" title="" class="uno">Principal</a></li>
+                <li><a href="expediente.html" title="" class="dos">Expediente</a></li>
+                <li><a href="citas.html" title="" class="tres">Citas</a></li>
+                <li><a href="doctores.html" title="" class="cuatro">Doctores</a></li>
+                <li><a href="entidad.html" title="" class="cinco">EntidadSalud</a></li>
+            </ul>
+        </nav>
+        <main class="wrapper">
+            <nav>
+                <ul class="exp">
+                    <li><a href="expediente.html">Expediente</a></li>
+                    <li><a href="">Agregar Expediente</a></li>
+                    <li><a href="">Actualizar Expediente</a></li>
+                    <li><a href="">Otorgar Acceso al Expediente</a></li>
+                    <li><a href="">Agregar Tutor al Expediente</a></li>
+                </ul>
+            </nav>
+            <h1>Agregar Expediente</h1>
+            <section>
+                <form method="POST" action="/ServletExpediente">
+                    <table>
+                        <tr>
+                            <td class="n">CURP</td>
+                            <td class="m"><input type="text" name="curp" placeholder="CURP" ></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Nombre</td>
+                            <td class="m"><input type="text" name="nombre" placeholder="NOMBRE"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Apellido Paterno</td>
+                            <td class="m"><input type="text" name="apellidoPaterno" placeholder="APELLIDO PATERNO"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Apellido Materno</td>
+                            <td class="m"><input type="text" name="apellidoMaterno" placeholder="APELLIDO MATERNO"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Fecha de nacimiento</td>
+                            <td class="m"><input type="date" name="fechaNacimiento" placeholder="FECHA DE NACIMIENTO"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Edad</td>
+                            <td class="m"><input type="number" name="edad" placeholder="EDAD"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Sexo</td>
+                            <td class="m"><input type="text" name="sexo" placeholder="SEXO"></td>
+                        </tr>
+                        <tr>
+                            <td class="n">Domicilio</td>
+                            <td class="m"><input type="text" name="domicilio" placeholder="DOMICILIO"></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script  src="./js/peticiones.js"></script>
+    </body>
+</html>

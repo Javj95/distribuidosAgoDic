@@ -29,7 +29,7 @@ public class UsuarioController {
     private final String url = "http://localhost:1000";
     private Gson gson;
     private MultiValueMap<String, String> headers;
-    
+
     /**
      * Constructor de la clase
      */
@@ -40,41 +40,40 @@ public class UsuarioController {
         headers.add("Content-Type", "application/json");
         headers.add("Accept", "*/*");
     }
-    
+
     /**
      * Metodo encargado de registrar un usuario en el sistema
-     * 
+     *
      * @param usuario Usuario a registrar en el sistema
      * @return Regresa true si se registro correctamente de lo cotrario false
      */
-    public boolean registrarUsuario(Usuario usuario){
+    public boolean registrarUsuario(Usuario usuario) {
         System.out.println("--Registrando Usuario mediante metodo POST--");
         String body = gson.toJson(usuario);
         System.out.println("Request Body: " + body);
         HttpEntity<String> request = new HttpEntity<String>(body, headers);
-        ResponseEntity<String> res = restTemplate.postForEntity(url+"/register", request, String.class);
+        ResponseEntity<String> res = restTemplate.postForEntity(url + "/register", request, String.class);
         String jsonRes = res.getBody();
-        
+
         // Transforma la respuesta de la peticion en JsonObject para acceder a las propiedades del Json
-        JsonObject json = gson.fromJson(jsonRes, JsonObject.class);
-        String mensaje = json.get("message").getAsString();
+        Usuario user = gson.fromJson(jsonRes, Usuario.class);
+        System.out.println(user.getIdentificador());
         
-                
-        if (mensaje == "Funciona!"){
+        if (user != null) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
-    
+
     /**
      * Metodo encargado de identificar un usuario con su usuario y contraseña
-     * 
-     * @param username Nombre de usuario    
+     *
+     * @param username Nombre de usuario
      * @param password Contrase;a de usuario
      * @return Resgresa la informacion del usuario
      */
-    public Usuario identificarUsuario(String username,String password){
+    public Usuario identificarUsuario(String username, String password) {
         // Armando el body del request
         JsonObject credentials = new JsonObject();
         credentials.addProperty("username", username);
@@ -83,20 +82,12 @@ public class UsuarioController {
 
         // Armando el request
         HttpEntity<String> req = new HttpEntity<String>(body, headers);
-        
+
         // Mandando la solicitud y obteniendo la respuesta
-        ResponseEntity<String> res = restTemplate.postForEntity(url+"/login", req, String.class);
-     
-        JsonObject json = gson.fromJson(res.getBody(), JsonObject.class);
-        String mensaje = json.get("message").getAsString();
-        
-                
-        if (mensaje == "Funciona!"){
-            String user = json.get("usuario").getAsString();
-            Usuario resultado = gson.fromJson(user, Usuario.class);
-            return resultado;
-        }else{
-            return null;
-        }
+        ResponseEntity<String> res = restTemplate.postForEntity(url + "/login", req, String.class);
+
+        Usuario resultado = gson.fromJson(res.getBody(), Usuario.class);
+        System.out.println(resultado.getUsername());
+        return resultado;
     }
 }

@@ -83,7 +83,6 @@ public class ExpedienteController {
         HttpEntity<String> request = new HttpEntity<String>(headers);
         ResponseEntity<String> res = restTemplate.getForEntity(url+"/"+curp, String.class);
         String jsonRes = res.getBody();
-        System.out.println(jsonRes);
         Expediente resultado = gson.fromJson(jsonRes, Expediente.class);
         return resultado;
     }
@@ -98,14 +97,14 @@ public class ExpedienteController {
     public Expediente registrarEntradaHistorial(String curp,String entrada){
         // Armando el body del request
         JsonObject entry = new JsonObject();
-        entry.addProperty("entrada", entrada);
+        entry.addProperty("entry", entrada);
         String body = entry.toString();
 
         // Armando el request
         HttpEntity<String> req = new HttpEntity<String>(body, headers);
         
         // Mandando la solicitud y obteniendo la respuesta
-        ResponseEntity<String> res = restTemplate.postForEntity(url+"/"+curp, req, String.class);
+        ResponseEntity<String> res = restTemplate.postForEntity(url+"/entry/"+curp, req, String.class);
      
         // Se guarda la respuesta como expediente y se regresa
         Expediente resultado = gson.fromJson(res.getBody(), Expediente.class);
